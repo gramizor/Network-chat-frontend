@@ -1,30 +1,14 @@
-# React + TypeScript + Vite
+## Проект: Система обмена сообщениями в реальном времени
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Описание:
+Этот проект создан для обмена текстовыми сообщениями и файлами в реальном времени через веб-приложение. Система состоит из трех уровней: прикладного, транспортного и канального.
 
-Currently, two official plugins are available:
+### Прикладной уровень:
+Я ответственен за транспортный уровень, был разработан пользовательский интерфейс с использованием React, Redux Toolkit, Axios и MUI. Интерфейс имеет внешний вид, аналогичный российскому веб-сайту. Он позволяет отправлять текстовые сообщения и файлы через окно чата. Пользователь вводит свое имя при подключении (через WebSocket соединение), которое отображается с каждым отправленным сообщением. История чата не сохраняется после обновления страницы. Есть возможность выйти из чата, что очищает чат и логин.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Технологии:
+- React
+- Redux Toolkit
+- Axios
+- MUI (Material-UI)
+- [Макет Figma](https://www.figma.com/file/51B2fDrlclohyuFzuYKSRd/Chat-Microsoft?type=design&node-id=0-1&mode=design) сделан на основе сайта [Microsoft](https://www.microsoft.com/ru-ru/)
