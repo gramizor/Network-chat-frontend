@@ -1,10 +1,33 @@
-https://www.figma.com/file/51B2fDrlclohyuFzuYKSRd/Chat-Microsoft?type=design&node-id=0%3A1&mode=design&t=8LYnrPCXVt3MwMdn-1
+## Проект: Система обмена сообщениями в реальном времени
 
+### Описание:
+Этот проект создан для обмена текстовыми сообщениями и файлами в реальном времени через веб-приложение. Система состоит из трех уровней: прикладного, транспортного и канального.
+
+### Прикладной уровень:
+На прикладном уровне разработан пользовательский интерфейс с использованием React, Redux Toolkit, Axios и MUI. Интерфейс имеет внешний вид, аналогичный веб-сайту российской компании. Он позволяет отправлять текстовые сообщения и файлы через окно чата. Пользователь вводит свое имя при подключении (через WebSocket соединение), которое отображается с каждым отправленным сообщением. История чата не сохраняется после обновления страницы. Есть возможность выйти из чата, что очищает чат и логин.
+
+### Технологии:
+- React
+- Redux Toolkit
+- Axios
+- MUI (Material-UI)
+
+### Дизайн:
+[Ссылка на макет в Figma](https://www.figma.com/file/51B2fDrlclohyuFzuYKSRd/Chat-Microsoft?type=design&node-id=0%3A1&mode=design&t=8LYnrPCXVt3MwMdn-1)
+
+### Команды для запуска проекта:
+
+#### Клиент (прикладной уровень):
+```bash
 cd client
 npm install
 npm run dev
+```
 
+#### WebSocket сервер:
+```bash
 cd web-socket
-npm install 
+npm install
 npm install express
-node server.js  
+node server.js
+```
