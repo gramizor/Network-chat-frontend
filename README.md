@@ -15,6 +15,8 @@
 ### Дизайн:
 [Ссылка на макет в Figma](https://www.figma.com/file/51B2fDrlclohyuFzuYKSRd/Chat-Microsoft?type=design&node-id=0%3A1&mode=design&t=8LYnrPCXVt3MwMdn-1)
 
+### Диаграммы:
+
 ### Команды для запуска проекта:
 
 #### Клиент (прикладной уровень):
