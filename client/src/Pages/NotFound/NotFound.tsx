@@ -1,9 +1,7 @@
-import React from 'react'
+// import React from 'react'
 import s from './NotFound.module.scss'
 
-type Props = {}
-
-const NotFound = (props: Props) => {
+const NotFound = () => {
     return (
         <div className={s.NotFound}>NotFound</div>
     )

@@ -1,9 +1,33 @@
 /* Reset and base styles  */
 * {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
   padding: 0px;
   margin: 0px;
   border: none;
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('./fonts/segoe-ui.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI Bold';
+  src: url('./fonts/segoe-ui-bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Segoe UI Italic';
+  src: url('./fonts/segoe-ui-italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Segoe UI Bold Italic';
+  src: url('./fonts/segoe-ui-bold-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }
 
 *,
