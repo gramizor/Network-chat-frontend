@@ -21,10 +21,10 @@ const SendForm = (props: Props) => {
         <div className={s.inputForm}>
             <form className={s.form}>
                     <Button
-                        // component="label"
+                        component="label"
                         role={undefined}
                         aria-label="delete"
-                        // tabIndex={-1}
+                        tabIndex={-1}
                         color="inherit"
                     >
                         <AttachFileOutlinedIcon
