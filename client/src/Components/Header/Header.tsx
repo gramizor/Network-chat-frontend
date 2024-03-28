@@ -1,8 +1,6 @@
 import s from './Header.module.scss'
-// import ghost from '../Icons/ghost.png'
-import LoginIcon from '@mui/icons-material/Login';
-// import LogoutIcon from '@mui/icons-material/Logout';
 import ChatIcon from '@mui/icons-material/Chat';
+import ModalAuth from '../ModalAuth/ModalAuth';
 
 const Header = () => {
     return (
@@ -10,7 +8,6 @@ const Header = () => {
 
             <div className={s.container}>
                 <button className={s.iconContainer}>
-                    {/* <img src={ghost} alt="ghost" /> */}
                     <ChatIcon sx={{ fontSize: 30 }} />
                     <span>WhisperChat</span>
                 </button>
@@ -20,8 +17,7 @@ const Header = () => {
                     <LogoutIcon sx={{ fontSize: 30 }} />
                 </button> */}
                 <button className={s.iconContainer}>
-                    <span>Войти</span>
-                    <LoginIcon sx={{ fontSize: 30 }} />
+                    <ModalAuth />
                 </button>
             </div>
             <div className={s.banner}>

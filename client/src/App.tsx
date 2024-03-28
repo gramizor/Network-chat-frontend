@@ -1,22 +1,23 @@
-// import React from 'react'
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import NotFound from './Pages/NotFound/NotFound';
-import MainPage from './Pages/MainPage/MainPage';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import MainPage from "./Pages/MainPage/MainPage";
 
-const App = () => {
+function App() {
   return (
-    <BrowserRouter>
-      {/* <Navbar /> */}
-      {/* {!isDraftOpen && <ChatBtn setOpen={setIsDraftOpen} />}
-      {isDraftOpen && <Chat toggleReport={setIsDraftOpen} />} */}
-      <Routes>
-        {/* <Route path='/auth' element={<Auth />} /> */}
-        {/* <Route path='/registration' element={<Registration />} /> */}
-        <Route path='*' element={<NotFound />} />
-        <Route path='/' element={<MainPage />} />
-      </Routes>
-    </BrowserRouter>
-  )
+    <>
+      <ToastContainer
+        position="top-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        draggable={false}
+        theme={"colored"}
+      />
+      <MainPage />
+    </>
+  );
 }
 
-export default App
+export default App;
