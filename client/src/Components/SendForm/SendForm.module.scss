@@ -1,10 +1,18 @@
 .inputForm {
     width: 60vw;
     max-width: 1000px;
-    // background-color: aqua;
+    // background-color: #000000;
     margin: auto;
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.form{
+    display: flex;
+}
+
+.container{
+    display: flex;
 }
