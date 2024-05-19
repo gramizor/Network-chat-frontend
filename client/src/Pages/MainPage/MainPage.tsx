@@ -25,7 +25,7 @@ export const MainPage = () => {
           {!userName ? (
             <div className={s.center}>
               <StyledText variant="h6" textAlign="center">
-                Войдите в систему
+                Чтобы начать пользоваться, необходимо авторизоваться
               </StyledText>
             </div>
           ) : (

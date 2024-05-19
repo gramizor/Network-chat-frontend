@@ -8,15 +8,15 @@ import {
   TextField,
   styled,
   Typography,
+  Button,
 } from "@mui/material";
-import { Button } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { useApp } from "../../store/appSlice";
 import styles from "./styles.module.css";
 import { IconBrandWechat } from "@tabler/icons-react";
+import LoginIcon from "@mui/icons-material/Login";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { useWebSocket } from "../../hooks/useWebSocket";
-import { IconLogin2 } from "@tabler/icons-react";
-import { IconLogout } from "@tabler/icons-react";
 
 const StyledText = styled(Typography)(() => ({
   margin: 0,
@@ -70,20 +70,18 @@ function NavBar() {
           {userName ? (
             <>
               <Button
-                variant="subtle"
-                color="rgba(0, 0, 0, 1)"
+                variant="text"
                 onClick={handleLogoutClick}
-                rightSection={<IconLogout stroke={1} />}
+                endIcon={<LogoutIcon />}
               >
                 <StyledText>{userName}</StyledText>
               </Button>
             </>
           ) : (
             <Button
-              variant="subtle"
-              color="rgba(0, 0, 0, 1)"
+              variant="text"
               onClick={handleLoginClick}
-              rightSection={<IconLogin2 stroke={1} />}
+              endIcon={<LoginIcon />}
             >
               <StyledText>Войти </StyledText>
             </Button>

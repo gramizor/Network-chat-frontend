@@ -1,5 +1,4 @@
-import { TextField, Typography, styled } from "@mui/material";
-import { Button } from "@mantine/core";
+import { TextField, Typography, styled, Button } from "@mui/material";
 import { useRef, useState } from "react";
 import { IMessageRequest } from "../../types/chat.types";
 import styles from "./styles.module.css";
@@ -91,8 +90,7 @@ function InputBlock() {
           onClick={handleSendClick}
           disabled={isSendLoading || !userName}
           ref={buttonRef}
-          variant="filled"
-          size="sm"
+          variant="contained"
         >
           <StyledText>Отправить</StyledText>
         </Button>
