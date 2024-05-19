@@ -1,0 +1,30 @@
+:root,
+:root[data-theme="light"] {
+  --clr-surface: white;
+  --clr-on-surface: black;
+  --clr-on-surface-variant: rgb(255, 255, 255);
+  --clr-surface-container: white;
+  --clr-surface-container-high: rgb(250, 250, 250);
+  --clr-surface-container-highest: rgb(240, 240, 240);
+
+  --clr-primary: #00aeef;
+  --clr-on-primary: white;
+  --clr-primary-container: #00aeef;
+  --clr-on-primary-container: white;
+  --clr-on-primary-fixed-variant: gray;
+
+  --clr-success: #2ee447;
+  --clr-on-success: black;
+  --clr-success-container: #2ee447;
+  --clr-on-success-container: black;
+
+  --clr-error: #ff8f8f;
+  --clr-on-error: black;
+  --clr-error-container: #ff8f8f;
+  --clr-on-error-container: black;
+
+  --clr-outline: gray;
+
+  --clr-grad-left: #00aeef;
+  --clr-grad-right: #46dafb;
+}

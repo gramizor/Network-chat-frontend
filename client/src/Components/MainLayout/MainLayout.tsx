@@ -1,15 +1,9 @@
-import React from 'react'
-import SendForm from '../SendForm/SendForm'
+import { Outlet } from "react-router-dom";
+import styles from "./styles.module.css";
+import { FC, ReactNode } from "react";
 
-type Props = {}
-
-const MainLayout = (props: Props) => {
-    return (
-        <div>
-            
-            <SendForm />
-        </div>
-    )
-}
-
-export default MainLayout
+export const MainLayout: FC<{ children?: ReactNode }> = ({ children }) => {
+  return (
+    <div className={styles["main-layout-root"]}>{children ?? <Outlet />}</div>
+  );
+};

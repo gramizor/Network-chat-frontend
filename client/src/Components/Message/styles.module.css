@@ -1,0 +1,35 @@
+.messageWrapper {
+  padding-inline: 12px;
+  padding-block: 8px;
+  width: fit-content;
+  position: relative;
+  min-width: 100px;
+  max-width: 300px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.infoWrapper {
+  position: absolute;
+  left: 0;
+  width: max-content;
+  bottom: -20px;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.user {
+  align-self: flex-end;
+}
+.user .infoWrapper {
+  left: auto;
+  right: 0;
+}
+
+.error {
+  background-color: var(--clr-error-container);
+  color: var(--clr-on-error-container);
+}

@@ -1,135 +1,126 @@
-/* Reset and base styles  */
-* {
-  font-family: "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
-  padding: 0px;
-  margin: 0px;
-  border: none;
-}
-
-@font-face {
-  font-family: 'Segoe UI';
-  src: url('./fonts/segoe-ui.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Segoe UI Bold';
-  src: url('./fonts/segoe-ui-bold.ttf') format('truetype');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Segoe UI Italic';
-  src: url('./fonts/segoe-ui-italic.ttf') format('truetype');
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Segoe UI Bold Italic';
-  src: url('./fonts/segoe-ui-bold-italic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Links */
-
-a,
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* Common */
-
-aside,
-nav,
-footer,
-header,
-section,
-main {
-  display: block;
-}
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-ul,
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
 img,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
-/* Form */
-
-input,
-textarea,
-button,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button,
-input[type="submit"] {
-  display: inline-block;
-  box-shadow: none;
-  background-color: transparent;
-  background: none;
-  cursor: pointer;
-}
-
-input:focus,
-input:active,
-button:focus,
-button:active {
-  outline: none;
-}
-
-button::-moz-focus-inner {
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
   padding: 0;
   border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
-label {
-  cursor: pointer;
-}
-
-legend {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
+}
+html {
+  height: 100%;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
