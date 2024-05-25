@@ -1,5 +1,5 @@
 import { MainLayout } from "../../components";
-import { MainPage, NotFoundPage } from "../../Pages";
+import { MainPage, NotFoundPage } from "../../pages";
 import { IAppRoute } from "./types";
 
 /**

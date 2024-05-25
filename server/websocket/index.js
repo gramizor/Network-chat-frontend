@@ -1,6 +1,8 @@
 const WebSocket = require("ws");
 const axios = require("axios");
 
+const connections = {}
+
 async function websocket(expressServer, app) {
   // Создаем сервер WebSocket
   const websocketServer = new WebSocket.Server({
