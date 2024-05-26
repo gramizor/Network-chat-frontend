@@ -20,13 +20,18 @@ async function websocket(expressServer, app) {
   });
 
   // Обрабатываем соединение по WebSocket
-  websocketServer.on("connection", function connection(websocketConnection) {
+  websocketServer.on("connection", function connection(websocketConnection, request) {
+    const id = Math.random().toString(36).substr(2, 9); // Генерируем уникальный ID для соединения
+    connections[id] = websocketConnection; // Сохраняем соединение
+
     console.log("WebSocket Connection Established!");
-    
+
     // Обрабатываем сообщение от клиента через WebSocket
     websocketConnection.on("message", async (messageData) => {
       try {
-        console.log("New message from client:", JSON.parse(messageData.toString("utf8")));
+        const message = JSON.parse(messageData.toString("utf8"));
+        console.log("New message from client:", message);
+
         // Пересылаем сообщение на HTTP POST эндпоинт
         await axios.post(
           `http://${process.env.SERVER_URL || '192.168.0.84:8082'}/api/send-message`,
@@ -37,9 +42,21 @@ async function websocket(expressServer, app) {
             },
           }
         );
+
+        // Рассылаем сообщение всем клиентам, кроме отправителя
+        websocketServer.clients.forEach((client) => {
+          if (client !== websocketConnection && client.readyState === WebSocket.OPEN) {
+            client.send(JSON.stringify(message));
+          }
+        });
       } catch (error) {
         console.error("Error sending message to other backend:", error);
       }
+    });
+
+    // Удаляем соединение при его закрытии
+    websocketConnection.on("close", () => {
+      delete connections[id];
     });
   });
 
@@ -48,6 +65,7 @@ async function websocket(expressServer, app) {
     try {
       const message = req.body;
       console.log("Message from back:", message);
+
       // Отправляем сообщение клиенту через WebSocket
       websocketServer.clients.forEach((client) => {
         if (client.readyState === WebSocket.OPEN) {
