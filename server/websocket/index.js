@@ -34,7 +34,7 @@ async function websocket(expressServer, app) {
 
         // Пересылаем сообщение на HTTP POST эндпоинт
         await axios.post(
-          `http://${process.env.SERVER_URL || '192.168.0.84:8082'}/api/send-message`,
+          `http://${process.env.SERVER_URL}/message/send`,
           messageData,
           {
             headers: {
@@ -61,7 +61,7 @@ async function websocket(expressServer, app) {
   });
 
   // Обрабатываем HTTP POST запрос на эндпоинт '/api/send-message'
-  app.post(`/api/send-message`, (req, res) => {
+  app.post(`http://${process.env.SERVER_URL}/message/send`, (req, res) => {
     try {
       const message = req.body;
       console.log("Message from back:", message);
